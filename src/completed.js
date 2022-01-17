@@ -1,4 +1,4 @@
-function checkBox(tasks, index, state) {
+const checkBox = (tasks, index, state) => {
   for (let i = 0; i < tasks.length; i += 1) {
     if (tasks[i].index === index) {
       tasks[i].completed = state;
@@ -7,7 +7,7 @@ function checkBox(tasks, index, state) {
   }
 }
 
-export function editCompleted(box, tasks, index) {
+export const editCompleted = (box, tasks, index) => {
   if (box.checked) {
     checkBox(tasks, index, true);
   } else {
@@ -15,7 +15,7 @@ export function editCompleted(box, tasks, index) {
   }
 }
 
-export function completed() {
+export const completed = () => {
   const tasks = JSON.parse(localStorage.getItem('taskArr'));
   const boxes = document.querySelectorAll('.task-cb');
 
