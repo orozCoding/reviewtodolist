@@ -5,7 +5,7 @@ const checkBox = (tasks, index, state) => {
       localStorage.setItem('taskArr', JSON.stringify(tasks));
     }
   }
-}
+};
 
 export const editCompleted = (box, tasks, index) => {
   if (box.checked) {
@@ -13,7 +13,7 @@ export const editCompleted = (box, tasks, index) => {
   } else {
     checkBox(tasks, index, false);
   }
-}
+};
 
 export const completed = () => {
   const tasks = JSON.parse(localStorage.getItem('taskArr'));
@@ -36,4 +36,4 @@ export const completed = () => {
       }
     });
   }
-}
+};
